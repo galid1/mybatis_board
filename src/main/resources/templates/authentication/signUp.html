@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<div th:replace="fragments/configHead :: head"/>
+
+<body>
+    <div th:replace="fragments/header :: header"></div>
+    <div>
+        <div>
+            <form action="/auth/doSignUp" method="post">
+                <input type="text" name="authId" id="authId">
+                <input type="password" name="password" id="password">
+                <input type="password" id="passwordCheck">
+                <input type="text" name="name" id="name">
+                <button type="submit">회원가입</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
