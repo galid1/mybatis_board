@@ -7,3 +7,11 @@ create table user(
         name varchar(255),
         authId varchar(255),
         password varchar(255));
+
+create table board(
+	boardId int primary key auto_increment,
+	title varchar(255),
+	contents varchar(255),
+	createdAt datetime,
+	lastModifiedAt datetime,
+	writer long);
