@@ -38,7 +38,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .loginPage("/auth/signIn")
                     .usernameParameter("authId")
                     .passwordParameter("password")
-                    .loginProcessingUrl("/auth/doLogin");
+                    .loginProcessingUrl("/auth/doLogin")
+                    .successHandler(new SignInSuccessHandler());
     }
 
     @Bean
@@ -46,3 +47,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 }
+
