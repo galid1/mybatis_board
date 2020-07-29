@@ -3,11 +3,11 @@
 <body th:fragment="header">
     <div>
         <div>MyBatis Board</div>
-        <div th:if="">
-
+        <div th:if="${session.login}">
+            Sesssion
         </div>
-        <div th:unless="">
-
+        <div th:unless="${session.login}">
+            no session
         </div>
     </div>
 </body>
