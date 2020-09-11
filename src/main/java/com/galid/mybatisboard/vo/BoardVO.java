@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -13,5 +15,7 @@ public class BoardVO {
     private String title;
     private String contents;
     private Long writer;
+    private LocalDateTime createdDate;
+    private LocalDateTime lastModifiedDate;
 }
 
